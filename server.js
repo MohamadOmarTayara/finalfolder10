@@ -7,7 +7,7 @@ const passport = require("passport");
 const bodyparser = require("body-parser");
 const users = require("./routes/api/users.js");
 const profile = require("./routes/api/profile.js");
-const post = require("./routes/api/post.js");
+const posts = require("./routes/api/posts.js");
 
 const db = require("./config/keys.js").mongoURI;
 
@@ -28,7 +28,7 @@ require("./config/passport")(passport);
 
 app.use("/api/users", users);
 app.use("/api/profile", profile);
-app.use("/api/post", post);
+app.use("/api/posts", posts);
 
 // app.get("/", function (req, res) {
 //   res.send("hello");
